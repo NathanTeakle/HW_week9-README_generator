@@ -1,12 +1,10 @@
 // Defining constant references to values.
 const inquirer = require("inquirer");
 const fs = require("fs");
-const utils = require("utils");
-// Calling the included generateMarkdown module.
-const generateMarkdown = require("./utils/generateMarkdown.js");
+//const utils = require("utils");
 
 // Inquirer prompts to guide file Generation.
-function inputPrompt() {
+function userPrompt() {
     return inquirer.prompt([{
             type: "input",
             name: "UsernameQuestion",
@@ -65,4 +63,6 @@ function inputPrompt() {
         },
     ])
 }
-//Code to compile answers and provide output.
+
+// Code to compile results.
+// Yet to be done, I have no idea how to do it.
