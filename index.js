@@ -65,9 +65,4 @@ function inputPrompt() {
         },
     ])
 }
-
-// Code to compile results.
-
-then((answers) => {
-    console.info("Answer", answers);
-});
+//Code to compile answers and provide output.
