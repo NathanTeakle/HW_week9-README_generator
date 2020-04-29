@@ -60,23 +60,22 @@ inquirer.prompt([{
         name: "ProjectAuthorEmail",
         message: "Add email of Project Author:",
     },
+]).then(data => {
 
     // Code to compile inputs into outputs as a README File.
 
-]).then(data => {
     const listTable = `
-        * UsernameQuestion
-        ${data.username}
-        * RepoUrl
-        * ProjectTitle
-        * Project Description
-        * ProjectImage
-        * InstallationProcess
-        * ProjectUsage
-        * UsedLicenses
-        * ProjectTesting
-        * ProjectAuthor
-        * ProjectAuthorEmail`;
+        ${data.UsernameQuestion}
+        ${data.RepoUrl}
+        ${data.ProjectTitle}
+        ${data.ProjectDescription}
+        ${data.ProjectImage}
+        ${data.InstallationProcess}
+        ${data.ProjectUsage}
+        ${data.UsedLicenses}
+        ${data.ProjectTesting}
+        ${data.ProjectAuthor}
+        ${data.ProjectAuthorEmail}`;
 
     fs.writeFile("README_nt.md", listTable, function (err) {
         return console.log(err);
